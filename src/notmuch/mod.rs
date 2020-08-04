@@ -15,7 +15,7 @@ pub enum NotmuchError {
     DbFailedToOpen(String),
 }
 
-pub type NotmuchResult<T> = std::result::Result<T, NotmuchError>;
+pub type NotmuchResult<T> = Result<T, NotmuchError>;
 
 #[derive(Debug)]
 pub struct NotmuchDb {
