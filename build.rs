@@ -5,8 +5,16 @@ fn main() {
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-        .whitelist_function("notmuch_database_open_verbose")
         .whitelist_function("notmuch_database_destroy")
+        .whitelist_function("notmuch_database_open_verbose")
+        .whitelist_function("notmuch_message_destroy")
+        .whitelist_function("notmuch_message_get_header")
+        .whitelist_function("notmuch_messages_get")
+        .whitelist_function("notmuch_messages_move_to_next")
+        .whitelist_function("notmuch_messages_valid")
+        .whitelist_function("notmuch_query_create")
+        .whitelist_function("notmuch_query_destroy")
+        .whitelist_function("notmuch_query_search_messages")
         .generate()
         .expect("Unable to generate bindings");
 
