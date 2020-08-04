@@ -5,7 +5,7 @@ fn main() {
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-        .whitelist_function("notmuch_database_open")
+        .whitelist_function("notmuch_database_open_verbose")
         .whitelist_function("notmuch_database_destroy")
         .generate()
         .expect("Unable to generate bindings");
