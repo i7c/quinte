@@ -12,7 +12,14 @@ use std::ptr;
 
 #[derive(Debug)]
 pub enum NotmuchError {
+    FfiCString(std::ffi::NulError),
     DbFailedToOpen(String),
+}
+
+impl From<std::ffi::NulError> for NotmuchError {
+    fn from(error: std::ffi::NulError) -> Self {
+        NotmuchError::FfiCString(error)
+    }
 }
 
 pub type NotmuchResult<T> = Result<T, NotmuchError>;
@@ -39,7 +46,7 @@ fn convert_error_message(ptr: *mut raw::c_char) -> String {
 
 impl NotmuchDb {
     pub fn open(path: &str) -> NotmuchResult<NotmuchDb> {
-        let path = CString::new(path).expect("Failed to create CString");
+        let path = CString::new(path)?;
 
         let result: notmuch_status_t;
         let mut db_ptr: *mut notmuch_database_t = ptr::null_mut();
