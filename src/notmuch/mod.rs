@@ -38,7 +38,7 @@ fn convert_error_message(ptr: *mut raw::c_char) -> String {
 }
 
 impl NotmuchDb {
-    pub fn open(path: &str) -> Result<NotmuchDb, NotmuchError> {
+    pub fn open(path: &str) -> NotmuchResult<NotmuchDb> {
         let path = CString::new(path).expect("Failed to create CString");
 
         let result: notmuch_status_t;
