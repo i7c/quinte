@@ -29,17 +29,12 @@ pub struct NotmuchDb {
     db_ptr: *mut notmuch_database_t,
 }
 
-fn convert_error_message(ptr: *mut raw::c_char) -> String {
+fn c_string_to_owned(ptr: *const raw::c_char) -> String {
     unsafe {
-        if !ptr.is_null() {
-            let message = CStr::from_ptr(ptr)
-                .to_str()
-                .unwrap_or_else(|_| "error message could not be decoded")
-                .to_owned();
-            libc::free(ptr as *mut libc::c_void);
-            return message;
+        if ptr.is_null() {
+            "".to_owned()
         } else {
-            "no detailled error message".to_owned()
+            CStr::from_ptr(ptr).to_string_lossy().into_owned()
         }
     }
 }
@@ -60,7 +55,7 @@ impl NotmuchDb {
             );
         }
         if result != _notmuch_status_NOTMUCH_STATUS_SUCCESS {
-            Err(NotmuchError::DbFailedToOpen(convert_error_message(msg)))
+            Err(NotmuchError::DbFailedToOpen(c_string_to_owned(msg)))
         } else {
             Ok(NotmuchDb { db_ptr })
         }
