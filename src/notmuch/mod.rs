@@ -124,9 +124,23 @@ impl Iterator for MessageSearchResult {
         unsafe {
             if notmuch_messages_valid(self.messages_c_iter) != 0 {
                 let message = notmuch_messages_get(self.messages_c_iter);
-                let message = Message::from_notmuch_message_t(message);
+
+                let content_type = get_header(message, "Content-Type");
+                let date = get_header(message, "Date")
+                    .expect("notmuch did not return a date header for this message");
+                let from = get_header(message, "From")
+                    .expect("notmuch did not return a from header for this message");
+                let subject = get_header(message, "Subject");
+                let to = get_header(message, "To");
+
                 notmuch_messages_move_to_next(self.messages_c_iter);
-                Some(message)
+                Some(Message {
+                    content_type,
+                    date,
+                    from,
+                    subject,
+                    to,
+                })
             } else {
                 None
             }
@@ -136,7 +150,9 @@ impl Iterator for MessageSearchResult {
 
 #[derive(Debug)]
 pub struct Message {
-    pub from: Option<String>,
+    pub content_type: Option<String>,
+    pub date: String,
+    pub from: String,
     pub subject: Option<String>,
     pub to: Option<String>,
 }
@@ -150,15 +166,5 @@ fn get_header(msg: *mut notmuch_message_t, header: &str) -> Option<String> {
             msg,
             CString::new(header).expect("CString::new failed").as_ptr(),
         ))
-    }
-}
-
-impl Message {
-    fn from_notmuch_message_t(m: *mut notmuch_message_t) -> Self {
-        Message {
-            from: get_header(m, "From"),
-            subject: get_header(m, "Subject"),
-            to: get_header(m, "To"),
-        }
     }
 }
