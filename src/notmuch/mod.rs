@@ -130,6 +130,8 @@ impl Iterator for MessageSearchResult {
                     .expect("notmuch did not return a date header for this message");
                 let from = get_header(message, "From")
                     .expect("notmuch did not return a from header for this message");
+                let path = c_string_to_owned(notmuch_message_get_filename(message))
+                    .expect("notmuch did not return a path for this message");
                 let subject = get_header(message, "Subject");
                 let to = get_header(message, "To");
 
@@ -138,6 +140,7 @@ impl Iterator for MessageSearchResult {
                     content_type,
                     date,
                     from,
+                    path,
                     subject,
                     to,
                 })
@@ -153,6 +156,7 @@ pub struct Message {
     pub content_type: Option<String>,
     pub date: String,
     pub from: String,
+    pub path: String,
     pub subject: Option<String>,
     pub to: Option<String>,
 }
