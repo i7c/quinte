@@ -8,6 +8,7 @@ fn main() {
         .whitelist_function("notmuch_database_destroy")
         .whitelist_function("notmuch_database_open_verbose")
         .whitelist_function("notmuch_message_destroy")
+        .whitelist_function("notmuch_message_get_date")
         .whitelist_function("notmuch_message_get_filename")
         .whitelist_function("notmuch_message_get_header")
         .whitelist_function("notmuch_messages_get")

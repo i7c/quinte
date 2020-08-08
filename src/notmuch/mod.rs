@@ -126,8 +126,7 @@ impl Iterator for MessageSearchResult {
                 let message = notmuch_messages_get(self.messages_c_iter);
 
                 let content_type = get_header(message, "Content-Type");
-                let date = get_header(message, "Date")
-                    .expect("notmuch did not return a date header for this message");
+                let date = notmuch_message_get_date(message);
                 let from = get_header(message, "From")
                     .expect("notmuch did not return a from header for this message");
                 let path = c_string_to_owned(notmuch_message_get_filename(message))
@@ -154,7 +153,7 @@ impl Iterator for MessageSearchResult {
 #[derive(Debug)]
 pub struct Message {
     pub content_type: Option<String>,
-    pub date: String,
+    pub date: i64,
     pub from: String,
     pub path: String,
     pub subject: Option<String>,
