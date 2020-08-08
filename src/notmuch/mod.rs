@@ -30,12 +30,12 @@ pub struct NotmuchDb {
     db_ptr: *mut notmuch_database_t,
 }
 
-fn c_string_to_owned(ptr: *const raw::c_char) -> String {
+fn c_string_to_owned(ptr: *const raw::c_char) -> Option<String> {
     unsafe {
         if ptr.is_null() {
-            "".to_owned()
+            None
         } else {
-            CStr::from_ptr(ptr).to_string_lossy().into_owned()
+            Some(CStr::from_ptr(ptr).to_string_lossy().into_owned())
         }
     }
 }
@@ -56,7 +56,9 @@ impl NotmuchDb {
             );
         }
         if result != _notmuch_status_NOTMUCH_STATUS_SUCCESS {
-            Err(NotmuchError::DbFailedToOpen(c_string_to_owned(msg)))
+            Err(NotmuchError::DbFailedToOpen(
+                c_string_to_owned(msg).unwrap_or_else(|| "No error message".to_owned()),
+            ))
         } else {
             Ok(NotmuchDb { db_ptr })
         }
@@ -134,12 +136,15 @@ impl Iterator for MessageSearchResult {
 
 #[derive(Debug)]
 pub struct Message {
-    pub from: String,
-    pub subject: String,
-    pub to: String,
+    pub from: Option<String>,
+    pub subject: Option<String>,
+    pub to: Option<String>,
 }
 
-fn get_header(msg: *mut notmuch_message_t, header: &str) -> String {
+/// Returns the value of header from msg.
+///
+/// `msg` must be a valid pointer to a notmuch_message_t. We won't check it!
+fn get_header(msg: *mut notmuch_message_t, header: &str) -> Option<String> {
     unsafe {
         c_string_to_owned(notmuch_message_get_header(
             msg,
