@@ -14,6 +14,7 @@ use std::ptr;
 pub enum NotmuchError {
     FfiCString(std::ffi::NulError),
     DbFailedToOpen(String),
+    SearchMessagesFailed,
 }
 
 impl From<std::ffi::NulError> for NotmuchError {
@@ -60,6 +61,29 @@ impl NotmuchDb {
             Ok(NotmuchDb { db_ptr })
         }
     }
+
+    pub fn search(&self, search_string: &str) -> NotmuchResult<MessageSearchResult> {
+        let search_cstr = CString::new(search_string)?;
+
+        unsafe {
+            let query = notmuch_query_create(self.db_ptr, search_cstr.as_ptr());
+            let mut messages: *mut notmuch_messages_t = ptr::null_mut();
+
+            let status = notmuch_query_search_messages(query, &mut messages);
+
+            if status != _notmuch_status_NOTMUCH_STATUS_SUCCESS {
+                // if we never got so far as to create a MessageSearchResult, we destroy the query
+                // manually, because it won't be destroyed by droping a MessageSearchResult
+                notmuch_query_destroy(query);
+                Err(NotmuchError::SearchMessagesFailed)
+            } else {
+                Ok(MessageSearchResult {
+                    query,
+                    messages_c_iter: messages,
+                })
+            }
+        }
+    }
 }
 
 impl Drop for NotmuchDb {
@@ -68,6 +92,68 @@ impl Drop for NotmuchDb {
             if !self.db_ptr.is_null() {
                 notmuch_database_destroy(self.db_ptr);
             }
+        }
+    }
+}
+
+pub struct MessageSearchResult {
+    query: *mut notmuch_query_t,
+    messages_c_iter: *mut notmuch_messages_t,
+}
+
+impl Drop for MessageSearchResult {
+    fn drop(&mut self) {
+        if !self.query.is_null() {
+            unsafe {
+                notmuch_query_destroy(self.query);
+            }
+            self.query = ptr::null_mut();
+        }
+    }
+}
+
+impl Iterator for MessageSearchResult {
+    type Item = Message;
+
+    fn next(&mut self) -> Option<Message> {
+        if self.query.is_null() || self.messages_c_iter.is_null() {
+            return None;
+        }
+        unsafe {
+            if notmuch_messages_valid(self.messages_c_iter) != 0 {
+                let message = notmuch_messages_get(self.messages_c_iter);
+                let message = Message::from_notmuch_message_t(message);
+                notmuch_messages_move_to_next(self.messages_c_iter);
+                Some(message)
+            } else {
+                None
+            }
+        }
+    }
+}
+
+#[derive(Debug)]
+pub struct Message {
+    pub from: String,
+    pub subject: String,
+    pub to: String,
+}
+
+fn get_header(msg: *mut notmuch_message_t, header: &str) -> String {
+    unsafe {
+        c_string_to_owned(notmuch_message_get_header(
+            msg,
+            CString::new(header).expect("CString::new failed").as_ptr(),
+        ))
+    }
+}
+
+impl Message {
+    fn from_notmuch_message_t(m: *mut notmuch_message_t) -> Self {
+        Message {
+            from: get_header(m, "From"),
+            subject: get_header(m, "Subject"),
+            to: get_header(m, "To"),
         }
     }
 }
