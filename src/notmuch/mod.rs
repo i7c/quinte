@@ -6,7 +6,8 @@ extern crate libc;
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
-use std::ffi::{CStr, CString};
+use crate::c_string_to_owned;
+use std::ffi::CString;
 use std::os::raw;
 use std::ptr;
 
@@ -30,15 +31,6 @@ pub struct NotmuchDb {
     db_ptr: *mut notmuch_database_t,
 }
 
-fn c_string_to_owned(ptr: *const raw::c_char) -> Option<String> {
-    unsafe {
-        if ptr.is_null() {
-            None
-        } else {
-            Some(CStr::from_ptr(ptr).to_string_lossy().into_owned())
-        }
-    }
-}
 
 impl NotmuchDb {
     pub fn open(path: &str) -> NotmuchResult<NotmuchDb> {
