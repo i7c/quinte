@@ -13,6 +13,7 @@ use message::*;
 use std::ffi::CString;
 use std::os::raw;
 use std::ptr;
+use tokio::sync::Mutex;
 
 #[derive(Debug)]
 pub enum NotmuchError {
@@ -32,7 +33,11 @@ pub type NotmuchResult<T> = Result<T, NotmuchError>;
 #[derive(Debug)]
 pub struct NotmuchDb {
     db_ptr: *mut notmuch_database_t,
+    mutex: Mutex<()>,
 }
+
+unsafe impl Send for NotmuchDb {}
+unsafe impl Sync for NotmuchDb {}
 
 impl Drop for NotmuchDb {
     fn drop(&mut self) {
@@ -64,11 +69,15 @@ impl NotmuchDb {
                 c_string_to_owned(msg).unwrap_or_else(|| "No error message".to_owned()),
             ))
         } else {
-            Ok(NotmuchDb { db_ptr })
+            Ok(NotmuchDb {
+                db_ptr,
+                mutex: Mutex::new(()),
+            })
         }
     }
 
     pub fn search(&self, search_string: &str) -> NotmuchResult<MessageSearchResult> {
+        let _guard = self.mutex.lock();
         let search_cstr = CString::new(search_string)?;
 
         unsafe {
