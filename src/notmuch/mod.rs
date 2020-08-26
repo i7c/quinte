@@ -9,7 +9,6 @@ include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 pub mod message;
 
 use crate::c_string_to_owned;
-use message::*;
 use std::ffi::CString;
 use std::os::raw;
 use std::ptr;
