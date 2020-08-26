@@ -3,6 +3,13 @@ pub mod server;
 
 use std::{ffi::CStr, os::raw};
 
+#[derive(Debug)]
+pub enum Error {
+    WebSocketError(String),
+}
+
+pub type Result<T> = std::result::Result<T, Error>;
+
 fn c_string_to_owned(ptr: *const raw::c_char) -> Option<String> {
     unsafe {
         if ptr.is_null() {
