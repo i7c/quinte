@@ -1,11 +1,19 @@
 use log::info;
-
-use quinte::server;
+use quinte::{notmuch, server};
+use std::env;
+use std::sync::Arc;
 
 #[tokio::main]
 async fn main() {
     env_logger::init();
     info!("Quinte Server");
 
-    server::listen().await;
+    let home = env::var("HOME").expect("$HOME is not set.");
+    let db_path = format!("{}/.mail", home);
+
+    info!("Open database at {}", db_path);
+    let db = notmuch::NotmuchDb::open(&db_path).expect("Could not open the database");
+    let db = Arc::new(db);
+
+    server::listen(db).await.expect("Server failed to start");
 }

@@ -5,7 +5,18 @@ use std::{ffi::CStr, os::raw};
 
 #[derive(Debug)]
 pub enum Error {
-    WebSocketError(String),
+    CString,
+    FrameParse(String),
+    Internal(&'static str),
+    NotmuchSearch,
+    UnknownPayload,
+    WebSocket(String),
+}
+
+impl From<std::ffi::NulError> for Error {
+    fn from(_error: std::ffi::NulError) -> Self {
+        Error::CString
+    }
 }
 
 pub type Result<T> = std::result::Result<T, Error>;

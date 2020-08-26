@@ -8,6 +8,7 @@ include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 pub mod message;
 
+use super::{Error, Result};
 use crate::c_string_to_owned;
 use std::ffi::CString;
 use std::os::raw;
@@ -27,7 +28,7 @@ impl From<std::ffi::NulError> for NotmuchError {
     }
 }
 
-pub type NotmuchResult<T> = Result<T, NotmuchError>;
+pub type NotmuchResult<T> = std::result::Result<T, NotmuchError>;
 
 #[derive(Debug)]
 pub struct NotmuchDb {
@@ -75,7 +76,7 @@ impl NotmuchDb {
         }
     }
 
-    pub fn search(&self, search_string: &str) -> NotmuchResult<MessageSearchResult> {
+    pub fn search(&self, search_string: &str) -> Result<MessageSearchResult> {
         let _guard = self.mutex.lock();
         let search_cstr = CString::new(search_string)?;
 
@@ -89,7 +90,7 @@ impl NotmuchDb {
                 // if we never got so far as to create a MessageSearchResult, we destroy the query
                 // manually, because it won't be destroyed by droping a MessageSearchResult
                 notmuch_query_destroy(query);
-                Err(NotmuchError::SearchMessagesFailed)
+                Err(Error::NotmuchSearch)
             } else {
                 Ok(MessageSearchResult {
                     query,
