@@ -65,9 +65,7 @@ pub struct Message {
 /// `msg` must be a valid pointer to a notmuch_message_t. We won't check it!
 fn get_header(msg: *mut notmuch_message_t, header: &str) -> Option<String> {
     unsafe {
-        c_string_to_owned(notmuch_message_get_header(
-            msg,
-            CString::new(header).expect("CString::new failed").as_ptr(),
-        ))
+        let header = CString::new(header).expect("CString::new failed");
+        c_string_to_owned(notmuch_message_get_header(msg, header.as_ptr()))
     }
 }
