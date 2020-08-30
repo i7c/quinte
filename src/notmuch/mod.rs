@@ -10,8 +10,7 @@ use super::{Error, Result};
 use crate::c_string_to_owned;
 use std::ffi::CString;
 use std::os::raw;
-use std::ptr;
-use tokio::sync::Mutex;
+use std::{ptr, sync::Mutex};
 
 #[derive(Debug)]
 pub enum NotmuchError {
