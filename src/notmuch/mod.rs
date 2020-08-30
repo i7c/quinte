@@ -41,8 +41,8 @@ unsafe impl Sync for NotmuchDb {}
 
 impl Drop for NotmuchDb {
     fn drop(&mut self) {
-        unsafe {
-            if !self.db_ptr.is_null() {
+        if !self.db_ptr.is_null() {
+            unsafe {
                 notmuch_database_destroy(self.db_ptr);
             }
         }
