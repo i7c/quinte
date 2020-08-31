@@ -29,20 +29,22 @@ pub type NotmuchResult<T> = std::result::Result<T, NotmuchError>;
 
 #[derive(Debug)]
 pub struct NotmuchDb {
-    db_ptr: Mutex<*mut notmuch_database_t>,
+    db_ptr: Mutex<NotmuchDbPointer>,
 }
 
-unsafe impl Send for NotmuchDb {}
-unsafe impl Sync for NotmuchDb {}
+#[derive(Debug)]
+struct NotmuchDbPointer(*mut notmuch_database_t);
+
+unsafe impl Send for NotmuchDbPointer {}
 
 impl Drop for NotmuchDb {
     fn drop(&mut self) {
         // Unwrap panics when the mutex was poisoned, which means another thread panicked while it held the mutex.
         // If this drop is called while panicking, a second panic will abort the program - but this seems fine.
-        let db_ptr = self.db_ptr.lock().expect("Poisoned Mutex");
+        let db_ptr = self.db_ptr.lock().expect("Poisoned Mutex").0;
         if !db_ptr.is_null() {
             unsafe {
-                notmuch_database_destroy(*db_ptr);
+                notmuch_database_destroy(db_ptr);
             }
         }
     }
@@ -69,17 +71,17 @@ impl NotmuchDb {
             ))
         } else {
             Ok(NotmuchDb {
-                db_ptr: Mutex::new(db_ptr),
+                db_ptr: Mutex::new(NotmuchDbPointer(db_ptr)),
             })
         }
     }
 
     pub fn search(&self, search_string: &str) -> Result<MessageSearchResult> {
-        let db_ptr = self.db_ptr.lock().expect("Poisoned Mutex");
+        let db_ptr = self.db_ptr.lock().expect("Poisoned Mutex").0;
         let search_cstr = CString::new(search_string)?;
 
         unsafe {
-            let query = notmuch_query_create(*db_ptr, search_cstr.as_ptr());
+            let query = notmuch_query_create(db_ptr, search_cstr.as_ptr());
             let mut messages: *mut notmuch_messages_t = ptr::null_mut();
 
             let status = notmuch_query_search_messages(query, &mut messages);
@@ -102,4 +104,21 @@ impl NotmuchDb {
 pub struct MessageSearchResult {
     query: *mut notmuch_query_t,
     messages_c_iter: *mut notmuch_messages_t,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn notmuch_db_is_sync() {
+        fn is_sync<T: Sync>() {}
+        is_sync::<NotmuchDb>();
+    }
+
+    #[test]
+    fn notmuch_db_is_send() {
+        fn is_send<T: Send>() {}
+        is_send::<NotmuchDb>();
+    }
 }
