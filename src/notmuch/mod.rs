@@ -29,8 +29,7 @@ pub type NotmuchResult<T> = std::result::Result<T, NotmuchError>;
 
 #[derive(Debug)]
 pub struct NotmuchDb {
-    db_ptr: *mut notmuch_database_t,
-    mutex: Mutex<()>,
+    db_ptr: Mutex<*mut notmuch_database_t>,
 }
 
 unsafe impl Send for NotmuchDb {}
@@ -38,9 +37,12 @@ unsafe impl Sync for NotmuchDb {}
 
 impl Drop for NotmuchDb {
     fn drop(&mut self) {
-        if !self.db_ptr.is_null() {
+        // Unwrap panics when the mutex was poisoned, which means another thread panicked while it held the mutex.
+        // If this drop is called while panicking, a second panic will abort the program - but this seems fine.
+        let db_ptr = self.db_ptr.lock().expect("Poisoned Mutex");
+        if !db_ptr.is_null() {
             unsafe {
-                notmuch_database_destroy(self.db_ptr);
+                notmuch_database_destroy(*db_ptr);
             }
         }
     }
@@ -67,18 +69,17 @@ impl NotmuchDb {
             ))
         } else {
             Ok(NotmuchDb {
-                db_ptr,
-                mutex: Mutex::new(()),
+                db_ptr: Mutex::new(db_ptr),
             })
         }
     }
 
     pub fn search(&self, search_string: &str) -> Result<MessageSearchResult> {
-        let _guard = self.mutex.lock();
+        let db_ptr = self.db_ptr.lock().expect("Poisoned Mutex");
         let search_cstr = CString::new(search_string)?;
 
         unsafe {
-            let query = notmuch_query_create(self.db_ptr, search_cstr.as_ptr());
+            let query = notmuch_query_create(*db_ptr, search_cstr.as_ptr());
             let mut messages: *mut notmuch_messages_t = ptr::null_mut();
 
             let status = notmuch_query_search_messages(query, &mut messages);
