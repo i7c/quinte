@@ -15,11 +15,12 @@ use std::os::raw;
 use std::ptr;
 use tokio::sync::Mutex;
 
-#[derive(Debug)]
+#[derive(Debug, thiserror::Error)]
 pub enum NotmuchError {
+    #[error("Invalid CString")]
     FfiCString(std::ffi::NulError),
+    #[error("{0}")]
     DbFailedToOpen(String),
-    SearchMessagesFailed,
 }
 
 impl From<std::ffi::NulError> for NotmuchError {

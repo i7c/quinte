@@ -3,13 +3,19 @@ pub mod server;
 
 use std::{ffi::CStr, os::raw};
 
-#[derive(Debug)]
+#[derive(Debug, thiserror::Error)]
 pub enum Error {
+    #[error("Invalid CString")]
     CString,
+    #[error("Failed to parse frame: {0:?}")]
     FrameParse(String),
+    #[error("Internal error ({0:?})")]
     Internal(&'static str),
+    #[error("Failed to search")]
     NotmuchSearch,
+    #[error("Unknown Payload")]
     UnknownPayload,
+    #[error("Websocket Error: {0:?}")]
     WebSocket(String),
 }
 
