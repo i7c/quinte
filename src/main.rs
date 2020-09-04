@@ -1,22 +1,31 @@
+use anyhow::Context;
 use log::info;
 use quinte::{notmuch, server};
 use std::env;
-use std::sync::Arc;
+use std::{process, sync::Arc};
 
 #[tokio::main]
 async fn main() {
+    if let Err(e) = try_main().await {
+        eprintln!("{}", e);
+        process::exit(1);
+    }
+}
+
+async fn try_main() -> anyhow::Result<()> {
     if env::var("RUST_LOG").is_err() {
         env::set_var("RUST_LOG", "info");
     }
     env_logger::init();
     info!("Quinte Server");
 
-    let home = env::var("HOME").expect("$HOME is not set.");
+    let home = env::var("HOME").context("$HOME is not set.")?;
     let db_path = format!("{}/.mail", home);
 
     info!("Open database at {}", db_path);
-    let db = notmuch::NotmuchDb::open(&db_path).expect("Could not open the database");
+    let db = notmuch::NotmuchDb::open(&db_path)?;
     let db = Arc::new(db);
 
-    server::listen(db).await.expect("Server failed to start");
+    server::listen(db).await.context("Server failed to start")?;
+    Ok(())
 }
