@@ -19,8 +19,11 @@ async fn try_main() -> anyhow::Result<()> {
     env_logger::init();
     info!("Quinte Server");
 
-    let home = env::var("HOME").context("$HOME is not set.")?;
-    let db_path = format!("{}/.mail", home);
+    let current_dir = env::current_dir()?;
+    let db_path = format!(
+        "{}/testdata",
+        current_dir.into_os_string().into_string().unwrap()
+    );
 
     info!("Open database at {}", db_path);
     let db = notmuch::NotmuchDb::open(&db_path)?;
