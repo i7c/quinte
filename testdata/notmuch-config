@@ -1,0 +1,13 @@
+[user]
+name=Max Mustermann
+primary_email=you@example.com
+
+[new]
+tags=unread;inbox;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
