@@ -37,6 +37,8 @@ class MailStore {
 
   select_next(): MailStore { return this.update({ selected_item: this.selected_item + 1 }); }
   select_prev(): MailStore { return this.update({ selected_item: this.selected_item - 1 }); }
+  page_next(): MailStore { return this.update({ selected_item: this.selected_item + this.page_size }); }
+  page_prev(): MailStore { return this.update({ selected_item: this.selected_item - this.page_size }); }
   set_expected_cid(cid: string): MailStore { return this.update({ expected_cid: cid }); }
 
   update(vals: Partial<MailStore>): MailStore {
@@ -72,6 +74,8 @@ class MailStoreApi {
 
   select_next() { this.update(s => s.select_next()); }
   select_prev() { this.update(s => s.select_prev()); }
+  page_next() { this.update(s => s.page_next()); }
+  page_prev() { this.update(s => s.page_prev()); }
 
   search(query: string) {
     let cid = uuid();

@@ -6,6 +6,8 @@
   let nmode_keybindings: Map<string, () => void> = new Map([
     ["j", () => mail_store.select_next()],
     ["k", () => mail_store.select_prev()],
+    ["[", () => mail_store.page_prev()],
+    ["]", () => mail_store.page_next()],
     [
       "Enter",
       () => {
