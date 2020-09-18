@@ -23,12 +23,8 @@ class MailStore {
   readonly page_active: number = 0;
   readonly page_selected_item: number = 0;
 
-  constructor(vals: Partial<MailStore>) {
+  constructor(vals?: Partial<MailStore>) {
     Object.assign(this, vals);
-  }
-
-  static create(m: Mail[]): MailStore {
-    return new MailStore({}).update_mails("", m);
   }
 
   update_mails(cid: string, m: Mail[]): MailStore {
@@ -69,7 +65,7 @@ class MailStore {
 }
 
 class MailStoreApi {
-  store = writable(MailStore.create([]));
+  store = writable(new MailStore());
 
   subscribe = this.store.subscribe;
   update = this.store.update;
