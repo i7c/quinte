@@ -1,5 +1,5 @@
 import { wsc } from "./wsclient";
-import { mailstore } from "./mail_store";
+import { mail_store } from "./mail_store";
 import { v4 as uuid } from "uuid";
 
 export function command(cmd_string: string) {
@@ -15,7 +15,7 @@ export function command(cmd_string: string) {
       },
     });
 
-    mailstore.expectedCid(cid);
+    mail_store.expectedCid(cid);
     wsc.send(request);
   }
 }

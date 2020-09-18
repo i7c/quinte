@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { mailstore } from "./mail_store";
+  import { mail_store } from "./mail_store";
 </script>
 
 <table>
@@ -9,8 +9,8 @@
     <td>From</td>
     <td>Date</td>
   </tr>
-  {#each $mailstore.mails as mail, i}
-    <tr class="{i === $mailstore.selected ? "selected" : "unselected"}">
+  {#each $mail_store.mails as mail, i}
+    <tr class="{i === $mail_store.selected ? "selected" : "unselected"}">
       <td>→</td>
       <td class="mail-subject">{mail.subject}</td>
       <td>{mail.from}</td>

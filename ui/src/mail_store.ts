@@ -39,4 +39,4 @@ class MailStore {
   }
 }
 
-export const mailstore = new MailStore();
+export const mail_store = new MailStore();

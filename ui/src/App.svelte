@@ -1,11 +1,11 @@
 <script lang="ts">
   import MailList from "./MailList.svelte";
-  import { mailstore } from "./mail_store";
+  import { mail_store } from "./mail_store";
   import { command } from "./command";
 
   let nmode_keybindings: Map<string, () => void> = new Map([
-    ["j", () => mailstore.selectDown()],
-    ["k", () => mailstore.selectUp()],
+    ["j", () => mail_store.select_next()],
+    ["k", () => mail_store.select_prev()],
     [
       "Enter",
       () => {

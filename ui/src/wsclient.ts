@@ -1,11 +1,11 @@
 import type { Mail } from "./mail_store";
-import { mailstore } from "./mail_store";
+import { mail_store } from "./mail_store";
 
 const router = new Map<string, (cid: string, o: object) => void>([
   ["MailList", (cid: string, o: object) => {
     let new_mail = <Mail[]>o;
 
-    mailstore.mailList(cid, new_mail);
+    mail_store.mailList(cid, new_mail);
   }],
 ]);
 
