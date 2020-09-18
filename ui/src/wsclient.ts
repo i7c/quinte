@@ -5,7 +5,7 @@ const router = new Map<string, (cid: string, o: object) => void>([
   ["MailList", (cid: string, o: object) => {
     let new_mail = <Mail[]>o;
 
-    mail_store.mailList(cid, new_mail);
+    mail_store.update_mails(cid, new_mail);
   }],
 ]);
 

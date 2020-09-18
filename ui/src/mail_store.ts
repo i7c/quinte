@@ -1,4 +1,6 @@
+import { v4 as uuid } from "uuid";
 import { writable } from "svelte/store";
+import { wsc } from "./wsclient";
 
 export interface Mail {
   content_type: string;
@@ -72,10 +74,23 @@ class MailStoreApi {
   subscribe = this.store.subscribe;
   update = this.store.update;
 
-  expectedCid(cid: string) { this.update(s => s.set_expected_cid(cid)); }
-  mailList(cid: string, m: Mail[]) { this.update(s => s.update_mails(cid, m)); }
   select_next() { this.update(s => s.select_next()); }
   select_prev() { this.update(s => s.select_prev()); }
+
+  search(query: string) {
+    let cid = uuid();
+    let request = JSON.stringify({
+      cid,
+      payload: {
+        MailSearch: query,
+      },
+    });
+
+    this.update(s => s.set_expected_cid(cid));
+    wsc.send(request);
+  }
+
+  update_mails(cid: string, m: Mail[]) { this.update(s => s.update_mails(cid, m)); }
 }
 
 export const mail_store = new MailStoreApi();
