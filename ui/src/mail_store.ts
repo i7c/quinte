@@ -12,16 +12,16 @@ export interface Mail {
 }
 
 class MailStore {
-  expected_cid: string = "";
-  mails: Mail[] = [];
-  selected_item: number = 0;
+  readonly expected_cid: string = "";
+  readonly mails: Mail[] = [];
+  readonly selected_item: number = 0;
 
   // These are all derived values that cannot be set manually
-  page: Mail[] = [];
-  page_size: number = 20;
-  page_count: number = 1;
-  page_active: number = 0;
-  page_selected_item: number = 0;
+  readonly page: Mail[] = [];
+  readonly page_size: number = 20;
+  readonly page_count: number = 1;
+  readonly page_active: number = 0;
+  readonly page_selected_item: number = 0;
 
   constructor(vals: Partial<MailStore>) {
     Object.assign(this, vals);
