@@ -10,33 +10,72 @@ export interface Mail {
 }
 
 class MailStore {
-  store = writable({
-    expectedCid: "",
-    mails: [],
-    selected: 0,
-  });
+  expected_cid: string = "";
+  mails: Mail[] = [];
+  selected_item: number = 0;
+
+  // These are all derived values that cannot be set manually
+  page: Mail[] = [];
+  page_size: number = 20;
+  page_count: number = 1;
+  page_active: number = 0;
+  page_selected_item: number = 0;
+
+  constructor(vals: Partial<MailStore>) {
+    Object.assign(this, vals);
+  }
+
+  static create(m: Mail[]): MailStore {
+    return new MailStore({}).update_mails("", m);
+  }
+
+  update_mails(cid: string, m: Mail[]): MailStore {
+    if (cid !== this.expected_cid) return this;
+    return this.update({
+      mails: m,
+      selected_item: 0,
+    });
+  }
+
+  select_next(): MailStore { return this.update({ selected_item: this.selected_item + 1 }); }
+  select_prev(): MailStore { return this.update({ selected_item: this.selected_item - 1 }); }
+  set_expected_cid(cid: string): MailStore { return this.update({ expected_cid: cid }); }
+
+  update(vals: Partial<MailStore>): MailStore {
+    let nms: MailStore = new MailStore({ ...this, ...vals });
+    return nms.normalize();
+  }
+
+  normalize(): MailStore {
+    // force global selected item into bounds
+    let nindex = Math.max(0, Math.min(this.mails.length - 1, this.selected_item));
+
+    let page_count = Math.floor(this.mails.length / this.page_size) + 1;
+    let page_active = Math.floor(nindex / this.page_size);
+    let page_selected_item = nindex % this.page_size;
+    let page = this.mails.slice(page_active * this.page_size, (page_active + 1) * this.page_size);
+
+    return new MailStore({
+      ...this,
+      selected_item: nindex,
+      page_count,
+      page_active,
+      page_selected_item,
+      page,
+    });
+  }
+}
+
+class MailStoreApi {
+  store = writable(MailStore.create([]));
 
   subscribe = this.store.subscribe;
   update = this.store.update;
 
-  selectDown() {
-    this.update(s => ({ ...s, selected: Math.min(s.selected + 1, s.mails.length - 1) }))
-  }
-
-  selectUp() {
-    this.update(s => ({ ...s, selected: Math.max(s.selected - 1, 0) }))
-  }
-
-  mailList(cid: string, m: Mail[]) {
-    this.update(s => {
-      if (s.expectedCid !== cid) return s;
-      return { ...s, mails: m, };
-    });
-  }
-
-  expectedCid(cid: string) {
-    this.update(s => ({ ...s, expectedCid: cid, }));
-  }
+  expectedCid(cid: string) { this.update(s => s.set_expected_cid(cid)); }
+  mailList(cid: string, m: Mail[]) { this.update(s => s.update_mails(cid, m)); }
+  select_next() { this.update(s => s.select_next()); }
+  select_prev() { this.update(s => s.select_prev()); }
 }
 
-export const mail_store = new MailStore();
+export const mail_store = new MailStoreApi();

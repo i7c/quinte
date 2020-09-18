@@ -9,8 +9,8 @@
     <td>From</td>
     <td>Date</td>
   </tr>
-  {#each $mail_store.mails as mail, i}
-    <tr class="{i === $mail_store.selected ? "selected" : "unselected"}">
+  {#each $mail_store.page as mail, i}
+    <tr class="{i === $mail_store.page_selected_item ? "selected" : "unselected"}">
       <td>→</td>
       <td class="mail-subject">{mail.subject}</td>
       <td>{mail.from}</td>
