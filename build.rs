@@ -11,6 +11,7 @@ fn main() {
         .whitelist_function("notmuch_message_get_date")
         .whitelist_function("notmuch_message_get_filename")
         .whitelist_function("notmuch_message_get_header")
+        .whitelist_function("notmuch_message_get_message_id")
         .whitelist_function("notmuch_messages_get")
         .whitelist_function("notmuch_messages_move_to_next")
         .whitelist_function("notmuch_messages_valid")
