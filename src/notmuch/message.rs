@@ -24,27 +24,9 @@ impl Iterator for MessageSearchResult {
         unsafe {
             if notmuch_messages_valid(self.messages_c_iter) != 0 {
                 let message = notmuch_messages_get(self.messages_c_iter);
-
-                let content_type = get_header(message, "Content-Type");
-                let date = notmuch_message_get_date(message);
-                let from = get_header(message, "From")
-                    .expect("notmuch did not return a from header for this message");
-                let id = c_string_to_owned(notmuch_message_get_message_id(message))?;
-                let path = c_string_to_owned(notmuch_message_get_filename(message))
-                    .expect("notmuch did not return a path for this message");
-                let subject = get_header(message, "Subject");
-                let to = get_header(message, "To");
-
+                let message = Message::from_notmuch(message);
                 notmuch_messages_move_to_next(self.messages_c_iter);
-                Some(Message {
-                    content_type,
-                    date,
-                    from,
-                    id,
-                    path,
-                    subject,
-                    to,
-                })
+                return Some(message);
             } else {
                 None
             }
@@ -61,6 +43,37 @@ pub struct Message {
     pub path: String,
     pub subject: Option<String>,
     pub to: Option<String>,
+}
+
+impl Message {
+    pub fn from_notmuch(message: *mut notmuch_message_t) -> Message {
+        if message.is_null() {
+            panic!("Passed null in from_notmuch");
+        }
+
+        unsafe {
+            let content_type = get_header(message, "Content-Type");
+            let date = notmuch_message_get_date(message);
+            let from = get_header(message, "From")
+                .expect("notmuch did not return a from header for this message");
+            let id = c_string_to_owned(notmuch_message_get_message_id(message))
+                .expect("ID on notmuch message is missing");
+            let path = c_string_to_owned(notmuch_message_get_filename(message))
+                .expect("notmuch did not return a path for this message");
+            let subject = get_header(message, "Subject");
+            let to = get_header(message, "To");
+
+            Message {
+                content_type,
+                date,
+                from,
+                id,
+                path,
+                subject,
+                to,
+            }
+        }
+    }
 }
 
 /// Returns the value of header from msg.
