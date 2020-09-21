@@ -8,6 +8,7 @@ pub mod message;
 
 use super::{Error, Result};
 use crate::c_string_to_owned;
+use message::Message;
 use std::ffi::CString;
 use std::os::raw;
 use std::{ptr, sync::Mutex};
@@ -97,6 +98,24 @@ impl NotmuchDb {
                     query,
                     messages_c_iter: messages,
                 })
+            }
+        }
+    }
+
+    pub fn find_message(&self, message_id: &str) -> Result<Message> {
+        let db_ptr = self.db_ptr.lock().expect("Poisoned Mutex").0;
+        let message_id_cstr = CString::new(message_id)?;
+
+        unsafe {
+            let mut message_ptr: *mut notmuch_message_t = ptr::null_mut();
+            let status =
+                notmuch_database_find_message(db_ptr, message_id_cstr.as_ptr(), &mut message_ptr);
+            if status != _notmuch_status_NOTMUCH_STATUS_SUCCESS || message_ptr.is_null() {
+                Err(Error::MessageIdNotFound(message_id.to_owned()))
+            } else {
+                let message = Message::from_notmuch(message_ptr);
+                notmuch_message_destroy(message_ptr);
+                return Ok(message);
             }
         }
     }
