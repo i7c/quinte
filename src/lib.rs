@@ -11,6 +11,8 @@ pub enum Error {
     FrameParse(String),
     #[error("Internal error ({0:?})")]
     Internal(&'static str),
+    #[error("Could not load mail {0:?}")]
+    MailLoad(String),
     #[error("There's no message with ID {0:?}")]
     MessageIdNotFound(String),
     #[error("Failed to search")]

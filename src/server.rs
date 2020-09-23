@@ -142,6 +142,7 @@ async fn process_frame(
                 .await?;
             Ok(())
         }
+
         QuintePayload::MailSearch(query) => {
             let mails = mail_search(query, db)?;
             response_channel
@@ -152,6 +153,18 @@ async fn process_frame(
                 .await?;
             Ok(())
         }
+
+        QuintePayload::LoadMail(message_id) => {
+            let mail = db.load_mail(&message_id)?;
+            response_channel
+                .send(QuinteFrame {
+                    cid: frame.cid,
+                    payload: QuintePayload::Mail(mail),
+                })
+                .await?;
+            Ok(())
+        }
+
         _ => Err(Error::UnknownPayload),
     }
 }
@@ -187,6 +200,8 @@ impl QuinteFrame {
 #[derive(Debug, Serialize, Deserialize)]
 enum QuintePayload {
     Error(String),
+    LoadMail(String),
+    Mail(String),
     MailSearch(String),
     MailList(Vec<notmuch::message::Message>),
     Ping,

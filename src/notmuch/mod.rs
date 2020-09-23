@@ -10,6 +10,7 @@ use super::{Error, Result};
 use crate::c_string_to_owned;
 use message::Message;
 use std::ffi::CString;
+use std::fs;
 use std::os::raw;
 use std::{ptr, sync::Mutex};
 
@@ -118,6 +119,11 @@ impl NotmuchDb {
                 return Ok(message);
             }
         }
+    }
+
+    pub fn load_mail(&self, message_id: &str) -> Result<String> {
+        let message = self.find_message(message_id)?;
+        fs::read_to_string(&message.path).map_err(|_| Error::MailLoad(message.path))
     }
 }
 
