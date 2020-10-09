@@ -1,0 +1,1159 @@
+{
+  "cid": "1",
+  "payload": {
+    "MailList": [
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-be54e3a416bd675664b476fbe25c09f376c7ce44",
+        "path": "/home/cwe/git/quinte/testdata/mail-jPfD.tmp",
+        "subject": "in 802 and in the view of!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-7dff9c275f69f5ba51004b7609415968f2703744",
+        "path": "/home/cwe/git/quinte/testdata/mail-gu1D.tmp",
+        "subject": "since Ceawlin in the late sixth century!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-d58ab96db11c5a9b5b657bc1fe4d5f46c9edc5fd",
+        "path": "/home/cwe/git/quinte/testdata/mail-Plse.tmp",
+        "subject": "in 839 he was succeeded by his!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-f8c1614a5394454f1e4611cd81e9a313276a31f4",
+        "path": "/home/cwe/git/quinte/testdata/mail-jDO7.tmp",
+        "subject": "it was decisively defeated by Ecgberht at!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-b8eed4fe8a2d2c6441d1e38a7831bc1bf4a62b45",
+        "path": "/home/cwe/git/quinte/testdata/mail-QZN9.tmp",
+        "subject": "married Æthelwulf's daughter Æthelswith.[20] In 825 Ecgberht!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-18dbcfecf53a568fc30fe192d1bbd9c57b3d8ade",
+        "path": "/home/cwe/git/quinte/testdata/mail-3ftl.tmp",
+        "subject": "835 and the following year they defeated!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-222f8cf0858fee3f7456ad262e144436c02181af",
+        "path": "/home/cwe/git/quinte/testdata/mail-5XrT.tmp",
+        "subject": "may not have intended a permanent union!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-5f0708dce643ff2c31a911a191ef41761341c2d8",
+        "path": "/home/cwe/git/quinte/testdata/mail-IF3b.tmp",
+        "subject": "in the early 840s on both sides!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-afac064a778f3d8bf0ab4db72722b819cf0bf523",
+        "path": "/home/cwe/git/quinte/testdata/mail-qIaE.tmp",
+        "subject": "Anglo-Saxon Chronicle \"there made the greatest slaughter!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-418f44bc5d4495b04aa5473853e11c3a4ebc1823",
+        "path": "/home/cwe/git/quinte/testdata/mail-EmSr.tmp",
+        "subject": "survived his father by two years and!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-a09cef11faf6058b8eb25e747cfa71302bd5c645",
+        "path": "/home/cwe/git/quinte/testdata/mail-EXvO.tmp",
+        "subject": "by his mother to the first of!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-2648537ee45cdfd7163976231a9b1efb7c72ec63",
+        "path": "/home/cwe/git/quinte/testdata/mail-Km9d.tmp",
+        "subject": "he was confirmed by Pope Leo IV!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-d7dc6b1878b62fe5c60b2770c974d78cb83b71e0",
+        "path": "/home/cwe/git/quinte/testdata/mail-3XdF.tmp",
+        "subject": "shows that Alfred was made a \"consul\"!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-0bc1b8666665fc1d304715f64162822c4e3d330a",
+        "path": "/home/cwe/git/quinte/testdata/mail-uYG6.tmp",
+        "subject": "their return from Rome in 856 Æthelwulf!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-183e903c7d8b701f2005e5d1217d073720efb885",
+        "path": "/home/cwe/git/quinte/testdata/mail-y1_q.tmp",
+        "subject": "in succession: Æthelbald Æthelberht and Æthelred.[32] The!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-4a7ca2a572e94ff9564f8f4d010aa8da5f3438f9",
+        "path": "/home/cwe/git/quinte/testdata/mail-s9qb.tmp",
+        "subject": "Army of Danes landing in East Anglia!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-92ba26057ded3504eb1aa7d7ef82353969ea9352",
+        "path": "/home/cwe/git/quinte/testdata/mail-k1pF.tmp",
+        "subject": "to the Celtic tanist a recognised successor!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-6a8befbb0c6daffec3b09335d92d0a461d1640a6",
+        "path": "/home/cwe/git/quinte/testdata/mail-NhMn.tmp",
+        "subject": "to whom the Anglo-Saxons were closely related!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-fab7f61b468e050d92c5aeeeea47022698f8a844",
+        "path": "/home/cwe/git/quinte/testdata/mail-VTAu.tmp",
+        "subject": "at the end of 870 and nine!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-5323eedcae34a5cb855892bc21e89565c1820f22",
+        "path": "/home/cwe/git/quinte/testdata/mail-t2_N.tmp",
+        "subject": "Reading by Ivar's brother Halfdan Ragnarsson on!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-0ac169f17b04e8eb532a4c70ceda948ae6d89936",
+        "path": "/home/cwe/git/quinte/testdata/mail-ReiT.tmp",
+        "subject": "were defeated again on 22 March at!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-28c106084f89a28dcd527cc36097ddb1c49fbabd",
+        "path": "/home/cwe/git/quinte/testdata/mail-iXRL.tmp",
+        "subject": "Æthelhelm and Æthelwold. This was in accordance!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-9b84c46e7f03efb1adfb563b207fb5ada430c811",
+        "path": "/home/cwe/git/quinte/testdata/mail-XmqF.tmp",
+        "subject": "deceased's sons would receive only whatever property!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-fff5e1deeb173d82bdf8c2cb77b88d3ba9953b54",
+        "path": "/home/cwe/git/quinte/testdata/mail-HBQC.tmp",
+        "subject": "for his brother the Danes defeated the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-5b3ea3c29db6d1c6463775e39b2a120b281aeb09",
+        "path": "/home/cwe/git/quinte/testdata/mail-eh72.tmp",
+        "subject": "not tell what the terms of the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-777fad6028abb722953d19a37dac81e5d95ebd8d",
+        "path": "/home/cwe/git/quinte/testdata/mail-eVJv.tmp",
+        "subject": "the Vikings cash to leave much as!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-be009e2ef624b417bf82ec0d37f45f8bc4fe3e51",
+        "path": "/home/cwe/git/quinte/testdata/mail-BkoV.tmp",
+        "subject": "parts of England.[38] In 876 under their!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-62659d38bc0036b69cecb88bd40d6f391c2fa694",
+        "path": "/home/cwe/git/quinte/testdata/mail-z9Z9.tmp",
+        "subject": "ring\" associated with the worship of Thor.!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-4696cc9ad58be7a75bc99e616b4496e013e3bacb",
+        "path": "/home/cwe/git/quinte/testdata/mail-79aJ.tmp",
+        "subject": "In January 878 the Danes made a!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-78be5f29d00bc8a4376f15f582489e0c649ffd17",
+        "path": "/home/cwe/git/quinte/testdata/mail-rMhO.tmp",
+        "subject": "For 200 years three families had fought!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-a4cfcf3f40be28f178aec35cb34d095bcb06f675",
+        "path": "/home/cwe/git/quinte/testdata/mail-xXqE.tmp",
+        "subject": "made Ecgberht an ætheling – a prince!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-fd44a0961e954be4b74960636789753aedf3be2b",
+        "path": "/home/cwe/git/quinte/testdata/mail-Xkn4.tmp",
+        "subject": "At the beginning of the ninth century!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-d9cc2826d033365dd283535b73c22b53d826b863",
+        "path": "/home/cwe/git/quinte/testdata/mail-hMw8.tmp",
+        "subject": "853 King Burgred of Mercia requested West!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-15bba2984c540e1c8db3cae00f25e1b46efe394b",
+        "path": "/home/cwe/git/quinte/testdata/mail-OL6l.tmp",
+        "subject": "830 Essex Surrey and Sussex had submitted!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-d8607b1657f85017092a621b7fab25fcb9d79742",
+        "path": "/home/cwe/git/quinte/testdata/mail-A9DL.tmp",
+        "subject": "at the Battle of Hingston Down reducing!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-8832667963fb4b6fad06e86af3c8e5bcecc13a5b",
+        "path": "/home/cwe/git/quinte/testdata/mail-_k8S.tmp",
+        "subject": "West Saxon magnates and Kentish charters were!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-c75cd52d81d540f414e7921ea565a84413b8b6ec",
+        "path": "/home/cwe/git/quinte/testdata/mail-T2lx.tmp",
+        "subject": "off Sandwich in the first recorded naval!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-1a5cc1648d6fe8a9cf081abe4057928e3472410f",
+        "path": "/home/cwe/git/quinte/testdata/mail-DOM7.tmp",
+        "subject": "victory\".[27] Æthelwulf died in 858 and was!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-40bc6994e53719ebb8651061ffaf31f4d154d8bf",
+        "path": "/home/cwe/git/quinte/testdata/mail-g8xp.tmp",
+        "subject": "Wessex in the early 14th-century Genealogical Roll!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-3b3c79921252452847e37fd4bd1e80dc736165e2",
+        "path": "/home/cwe/git/quinte/testdata/mail-MZzS.tmp",
+        "subject": "he was about six and he did!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-90f215eda71880e3ee8c67eeb6c7738e0a725a16",
+        "path": "/home/cwe/git/quinte/testdata/mail-u1_q.tmp",
+        "subject": "succession to the throne of Wessex. This!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-db0993664183d108a69a169e6fe305d4f972c0d9",
+        "path": "/home/cwe/git/quinte/testdata/mail-vv9F.tmp",
+        "subject": "fact that Alfred later accompanied his father!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-d247843dbc61b9c798ad6ea8838c1117821b07c1",
+        "path": "/home/cwe/git/quinte/testdata/mail-uGMy.tmp",
+        "subject": "form a compromise. Æthelbald retained the western!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-48a58c6993cea6629e3596733ce8b15dda74654f",
+        "path": "/home/cwe/git/quinte/testdata/mail-Zxa3.tmp",
+        "subject": "England from Denmark Norway and southern Sweden!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-22f3e237bb29fc6c56209804402d99a641a4cb75",
+        "path": "/home/cwe/git/quinte/testdata/mail-RW6n.tmp",
+        "subject": "865 at age 16 with the accession!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-405372d43cc61d16620b2b1d397ab0bcb53e67c1",
+        "path": "/home/cwe/git/quinte/testdata/mail-YpFP.tmp",
+        "subject": "to guard against the danger of a!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-290822f0ad52921e2dc60d8dd48e4b23e6f3da6a",
+        "path": "/home/cwe/git/quinte/testdata/mail-TgYe.tmp",
+        "subject": "fighting beside Æthelred in a failed attempt!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-6245f1575f4eba66bfdbdc54f1b5cb134fba604b",
+        "path": "/home/cwe/git/quinte/testdata/mail-4Kt_.tmp",
+        "subject": "have not been recorded. A successful skirmish!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-739f7d632a32b9d5a951157648bda975d382a706",
+        "path": "/home/cwe/git/quinte/testdata/mail-rjKb.tmp",
+        "subject": "Berkshire Downs possibly near Compton or Aldworth.!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-56ed4f3a82c5a573ab5a34b45ad9636338a35922",
+        "path": "/home/cwe/git/quinte/testdata/mail-eolM.tmp",
+        "subject": "at war Early struggles In April 871!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-abc43f93d9f89aee4c7b48bfea23e0178c724c18",
+        "path": "/home/cwe/git/quinte/testdata/mail-CmUC.tmp",
+        "subject": "called Swinbeorg. The brothers had agreed that!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-fc97700094e292af43aa1d50f424cd8ee2fcd422",
+        "path": "/home/cwe/git/quinte/testdata/mail-bATE.tmp",
+        "subject": "was that the surviving brother would be!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-716e32fb96fa3fe936883c620a99ac249ebb2c6a",
+        "path": "/home/cwe/git/quinte/testdata/mail-voOd.tmp",
+        "subject": "The defeat at Wilton smashed any remaining!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-799d402bbc6648701edb019bd6d49c8816157153",
+        "path": "/home/cwe/git/quinte/testdata/mail-A4AV.tmp",
+        "subject": "Viking army withdrew from Reading in the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-b2c78df80fe44de630e387981883cbabe2c5e19c",
+        "path": "/home/cwe/git/quinte/testdata/mail-rxys.tmp",
+        "subject": "have been excavated at Croydon Gravesend and!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-bbcca68184f99bb4b179c1c0db0f68c758a35eb9",
+        "path": "/home/cwe/git/quinte/testdata/mail-GCTU.tmp",
+        "subject": "Dorset. Alfred blockaded them but was unable!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-d648341ab8c909cf443de5b84a115b4f00a8b116",
+        "path": "/home/cwe/git/quinte/testdata/mail-e2Rx.tmp",
+        "subject": "in Devon.[39] Alfred blockaded the Viking ships!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-f7adf5c7a3b61a698eb770256aca36338c477361",
+        "path": "/home/cwe/git/quinte/testdata/mail-u5L4.tmp",
+        "subject": "Ecgberht became king of Wessex in 802!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-0a7cf6150ecf4443dfc0fd49e212c01be5018a78",
+        "path": "/home/cwe/git/quinte/testdata/mail-82h7.tmp",
+        "subject": "been a king of Wessex since Ceawlin!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-684e849c4f924c0d0b956eb7788bec2b99455a3c",
+        "path": "/home/cwe/git/quinte/testdata/mail-TlUo.tmp",
+        "subject": "an ætheling. When Ecgberht died in 839!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-19d485a3555d31016f9686647f77cd22fc9974bf",
+        "path": "/home/cwe/git/quinte/testdata/mail-qGlm.tmp",
+        "subject": "an end in 825 when it was!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-2beeb5ea7ecdd55a5da90a15fd9a7a855a29c7f6",
+        "path": "/home/cwe/git/quinte/testdata/mail-Ptco.tmp",
+        "subject": "In the same year Burgred married Æthelwulf's!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-ded83ade6186b46ed26f3553a73032b21330fb77",
+        "path": "/home/cwe/git/quinte/testdata/mail-pZ06.tmp",
+        "subject": "the Isle of Sheppey in 835 and!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-b0c7ec0a37e241bd65ae2236e6081b8366e6ec62",
+        "path": "/home/cwe/git/quinte/testdata/mail-_O4A.tmp",
+        "subject": "of Kent.[24] Ecgberht and Æthelwulf may not!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-787a0e7ee2aa7b2b5f4eec25adf7bc76e7eb05c0",
+        "path": "/home/cwe/git/quinte/testdata/mail-iAL2.tmp",
+        "subject": "own coinage.[25] Viking raids increased in the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-e42667e5d9e5f0d96b4e0b88f4f5355ad1df91c0",
+        "path": "/home/cwe/git/quinte/testdata/mail-l6M7.tmp",
+        "subject": "Aclea and according to the Anglo-Saxon Chronicle!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-184c634b37a06b057e6972ce0f82bbae1e2fef71",
+        "path": "/home/cwe/git/quinte/testdata/mail-6s9A.tmp",
+        "subject": "king of Kent. Æthelbald only survived his!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-a93645c527197eae035e400a8f99f00f04ce78c0",
+        "path": "/home/cwe/git/quinte/testdata/mail-dXCu.tmp",
+        "subject": "poetry offered as a prize by his!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-a264bb759a7720afa216f2d4c2158735524537d9",
+        "path": "/home/cwe/git/quinte/testdata/mail-Csqn.tmp",
+        "subject": "been sent to Rome where he was!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-2b978a61926ea23bd86e69662f20d34c8e12a7ff",
+        "path": "/home/cwe/git/quinte/testdata/mail-SjNl.tmp",
+        "subject": "A letter of Leo IV shows that!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-660955acf37ff992d46b7375ed7777118ccef107",
+        "path": "/home/cwe/git/quinte/testdata/mail-BHB6.tmp",
+        "subject": "the Franks around 854–855.[31] On their return!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-cc64ba41f3903cde24bd1cb9247a79889dca9d79",
+        "path": "/home/cwe/git/quinte/testdata/mail-ev2J.tmp",
+        "subject": "by three of Alfred's brothers in succession:!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-ea4017a35943fb0d3e8929a6c1d91b795c694c96",
+        "path": "/home/cwe/git/quinte/testdata/mail-joZd.tmp",
+        "subject": "Chronicle describes the Great Heathen Army of!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-2255bb0fece45d3cc13864da1aa3b050d948b411",
+        "path": "/home/cwe/git/quinte/testdata/mail-TRCG.tmp",
+        "subject": "may indicate a position similar to the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-c3933959029ce7cda4b17b0188fc51d6b678f190",
+        "path": "/home/cwe/git/quinte/testdata/mail-6lwU.tmp",
+        "subject": "as the Swedes and Franks to whom!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-601f5f4480d3ce7d6e1d6df26915958bab75aded",
+        "path": "/home/cwe/git/quinte/testdata/mail-PwSJ.tmp",
+        "subject": "Danes arrived in his homeland at the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-0bc62f9f090365351aee0ee0a93d8ac3a669540a",
+        "path": "/home/cwe/git/quinte/testdata/mail-jFlC.tmp",
+        "subject": "siege and the Battle of Reading by!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-6e46c35cfab766f78479a8c6941350e7f886f18f",
+        "path": "/home/cwe/git/quinte/testdata/mail-5hbQ.tmp",
+        "subject": "Basing on 22 January. They were defeated!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-41576c2cf1581bbe5e31dffd685eff279a717b1b",
+        "path": "/home/cwe/git/quinte/testdata/mail-6FAc.tmp",
+        "subject": "Æthelred left two under-age sons Æthelhelm and!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-940c6d120883e97c8075463da064aeea0aaf8e58",
+        "path": "/home/cwe/git/quinte/testdata/mail-2GYE.tmp",
+        "subject": "sons in his will. The deceased's sons!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-73eb11d6d91f001a8489138d2f4cc6e0be472dfe",
+        "path": "/home/cwe/git/quinte/testdata/mail-RXui.tmp",
+        "subject": "busy with the burial ceremonies for his!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-872c4e26fb783287687df4c04d37804e27b4c7d0",
+        "path": "/home/cwe/git/quinte/testdata/mail-44sJ.tmp",
+        "subject": "according to sources that do not tell!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-2335780f22d8e5956086d59e8c567f901792d511",
+        "path": "/home/cwe/git/quinte/testdata/mail-44ZS.tmp",
+        "subject": "Anglo-Saxon Chronicle Alfred probably paid the Vikings!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-990c5d95c657f285c1f18e5fb1c994c1c3ed4d32",
+        "path": "/home/cwe/git/quinte/testdata/mail-FG0q.tmp",
+        "subject": "years the Danes occupied other parts of!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-316112a742ae9233174df98360c42cb98f7d9ac1",
+        "path": "/home/cwe/git/quinte/testdata/mail-Pt2p.tmp",
+        "subject": "Danes swore on a \"holy ring\" associated!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-530060408a2685d5b34a904fe1047b60e53fc09f",
+        "path": "/home/cwe/git/quinte/testdata/mail-YiZ7.tmp",
+        "subject": "The Danes withdrew to Mercia. In January!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-f1b603eea5d3d823c502f6790577c809450fff72",
+        "path": "/home/cwe/git/quinte/testdata/mail-3Mkt.tmp",
+        "subject": "would establish a lasting dynasty. For 200!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-9f4b7546de8c4dbf8832a0bde9594cfbbd43e038",
+        "path": "/home/cwe/git/quinte/testdata/mail-bIlM.tmp",
+        "subject": "the West Saxon dynasty.[d] This made Ecgberht!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-eb6c05a9749384ae1daebfc76f0e409e20f8b301",
+        "path": "/home/cwe/git/quinte/testdata/mail-moFZ.tmp",
+        "subject": "were also sons of kings.[17] At the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-aee41ebeb2c1bc884c6faee52a57122be8424ba5",
+        "path": "/home/cwe/git/quinte/testdata/mail-JgjL.tmp",
+        "subject": "resistance to Viking attacks.[19] In 853 King!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-622e4388795ea9b2f23a20483597cbb7345efc9f",
+        "path": "/home/cwe/git/quinte/testdata/mail-JfK_.tmp",
+        "subject": "driven out shortly afterwards. By 830 Essex!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-0ff0bb4e364eb5ae1e23db6d5dbbebea0836bdc1",
+        "path": "/home/cwe/git/quinte/testdata/mail-HUuz.tmp",
+        "subject": "alliance of Cornishmen and Vikings at the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-aa1e0d08c38dd62dea66e92ded1cde8358faf61c",
+        "path": "/home/cwe/git/quinte/testdata/mail-btxy.tmp",
+        "subject": "Wessex were attested (witnessed) by West Saxon!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-ae2828fb93816144a983cce7b550603499d761c7",
+        "path": "/home/cwe/git/quinte/testdata/mail-VUxW.tmp",
+        "subject": "Æthelstan defeated a Danish fleet off Sandwich!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-9a6f940d54a1f1fa6ae837e8774706a645cad518",
+        "path": "/home/cwe/git/quinte/testdata/mail-ESBB.tmp",
+        "subject": "day and there took the victory\".[27] Æthelwulf!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-106bcd385e0f2e413ae3f1f159ff6b4b19f73df2",
+        "path": "/home/cwe/git/quinte/testdata/mail-d33z.tmp",
+        "subject": "Childhood Alfred's father Æthelwulf of Wessex in!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-1d7b03620675f6067e00c9c02a14e1797de64b84",
+        "path": "/home/cwe/git/quinte/testdata/mail-VmKQ.tmp",
+        "subject": "because his mother died when he was!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-6c1cfffb744814a6b2d551812eeb3536ad742cbc",
+        "path": "/home/cwe/git/quinte/testdata/mail-3Gl4.tmp",
+        "subject": "in preparation for his eventual succession to!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-62f59d094c03de96a171e22e4803eb0c0db936a7",
+        "path": "/home/cwe/git/quinte/testdata/mail-Kq2J.tmp",
+        "subject": "may be based upon the fact that!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-2036e8f864f24c9efcd85dab1e287df75538e0aa",
+        "path": "/home/cwe/git/quinte/testdata/mail-W0Bl.tmp",
+        "subject": "realm met in council to form a!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-4b577000301affe8303e95d7fe44268ada02654b",
+        "path": "/home/cwe/git/quinte/testdata/mail-FrEO.tmp",
+        "subject": "Heathen Army which arrived in England from!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-38e40d07c35fd2be54678e56636175b3c448a4aa",
+        "path": "/home/cwe/git/quinte/testdata/mail-9UvC.tmp",
+        "subject": "Alfred's public life began in 865 at!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-138e48eed46024e18e364eb6dc34f2774afc349a",
+        "path": "/home/cwe/git/quinte/testdata/mail-Uf6G.tmp",
+        "subject": "father or by the Witan to guard!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-ed6c7ab08d00ad46a794939b7b5f7b44cdc26507",
+        "path": "/home/cwe/git/quinte/testdata/mail-Tlc_.tmp",
+        "subject": "868 Alfred was recorded as fighting beside!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-bf484238315afcf840911c5360b54d7e44c75762",
+        "path": "/home/cwe/git/quinte/testdata/mail-UOfe.tmp",
+        "subject": "of two of these battles have not!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-76a24cef93ac73ac4475f600aadb9b18ea7ddd42",
+        "path": "/home/cwe/git/quinte/testdata/mail-pp5G.tmp",
+        "subject": "Battle of Ashdown on the Berkshire Downs!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-375be56f44ebd78976aafde0f2dd16a632fc3b02",
+        "path": "/home/cwe/git/quinte/testdata/mail-NLg7.tmp",
+        "subject": "shortly afterwards in April.[34] King at war!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-33b94e9fc368e2993d2ac8e53ddf9f14517209ac",
+        "path": "/home/cwe/git/quinte/testdata/mail-G_Av.tmp",
+        "subject": "assembly at an unidentified place called Swinbeorg.!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-9e6e76d3aac883a85134bbec1c8b7104ebdc668a",
+        "path": "/home/cwe/git/quinte/testdata/mail-TY38.tmp",
+        "subject": "had acquired. The unstated premise was that!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-45ee179a9841e85d61c22f79212610ac6e8a5f2f",
+        "path": "/home/cwe/git/quinte/testdata/mail-_nVJ.tmp",
+        "subject": "presence at Wilton in May.[34] The defeat!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-a5e1effd650a372674567e9dec1bab92ce27101d",
+        "path": "/home/cwe/git/quinte/testdata/mail-DdYj.tmp",
+        "subject": "made good their promise.[37] The Viking army!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-6d00c85876b6c08b5b97eb5eac20fb2f2dc8939e",
+        "path": "/home/cwe/git/quinte/testdata/mail-0mFJ.tmp",
+        "subject": "occupation of London in 871/872 have been!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-57590c259d42b3266e333ecc22ddbd8e55f77a85",
+        "path": "/home/cwe/git/quinte/testdata/mail-RYNN.tmp",
+        "subject": "attacked and occupied Wareham in Dorset. Alfred!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-420b626f43b3ad3b6466a1a27c419e75b5b64eca",
+        "path": "/home/cwe/git/quinte/testdata/mail-pFxG.tmp",
+        "subject": "cover of night to Exeter in Devon.[39]!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-7927c4463b566260d3bb0cfbc513118150971e9b",
+        "path": "/home/cwe/git/quinte/testdata/mail-dkgS.tmp",
+        "subject": "Christmas \"and most of the people they!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-0940dbea8c761df3f1aeff32b92a7a17ab7f639e",
+        "path": "/home/cwe/git/quinte/testdata/mail-Ig76.tmp",
+        "subject": "No ancestor of Ecgberht had been a!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-93f2726dc9bc0b7ca9ec93cf142d771af837c67b",
+        "path": "/home/cwe/git/quinte/testdata/mail-GX2s.tmp",
+        "subject": "sufficient to make a man an ætheling.!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-b6b455e68e1c98f2b118f19657231cbc4babcab1",
+        "path": "/home/cwe/git/quinte/testdata/mail-7xyn.tmp",
+        "subject": "but its supremacy came to an end!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-7491005f1f8c16ac1c3983d1c8796136f7d317d0",
+        "path": "/home/cwe/git/quinte/testdata/mail-Dwq9.tmp",
+        "subject": "in a successful joint campaign. In the!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-29f19c781d91c212be87d8960bbfc2b3f4b26c44",
+        "path": "/home/cwe/git/quinte/testdata/mail-yoTF.tmp",
+        "subject": "of Kent.[21] The Vikings ravaged the Isle!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-5e3b787135df8b731eabe12468372e8b1ff957b1",
+        "path": "/home/cwe/git/quinte/testdata/mail-8RFs.tmp",
+        "subject": "eldest son Æthelstan as sub-king of Kent.[24]!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-48a9e4ceac233621527f206397c1277e27eff44f",
+        "path": "/home/cwe/git/quinte/testdata/mail-JW0h.tmp",
+        "subject": "not allowed to issue their own coinage.[25]!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "harry@example.com",
+        "id": "notmuch-sha1-528d0f5421ced6e326274b87f4918fe6f38eb19b",
+        "path": "/home/cwe/git/quinte/testdata/mail-76p6.tmp",
+        "subject": "Vikings at the Battle of Aclea and!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "superman@example.com",
+        "id": "notmuch-sha1-f3cd58007bef9aa5225eb5bfe39180e035b948f3",
+        "path": "/home/cwe/git/quinte/testdata/mail-_mWW.tmp",
+        "subject": "next oldest son Æthelberht as king of!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gibbs@example.com",
+        "id": "notmuch-sha1-e68cb43dfa7ef646ce95c371c14e783bfc4d78a4",
+        "path": "/home/cwe/git/quinte/testdata/mail-jS_U.tmp",
+        "subject": "beautifully decorated book of English poetry offered!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "hodor@example.com",
+        "id": "notmuch-sha1-534e36b3df66162c1b75f30bcca9f0beae7ef564",
+        "path": "/home/cwe/git/quinte/testdata/mail-YjPo.tmp",
+        "subject": "the Anglo-Saxon Chronicle to have been sent!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "peter@example.com",
+        "id": "notmuch-sha1-ac7bedcc14dce5d7dac31066f6dd12b5d592ecf9",
+        "path": "/home/cwe/git/quinte/testdata/mail-UCTO.tmp",
+        "subject": "had three living elder brothers. A letter!",
+        "to": "you@example.com"
+      },
+      {
+        "content_type": "",
+        "date": 1599841030,
+        "from": "gandalf@example.com",
+        "id": "notmuch-sha1-95de184a7a2f91eb6a87cc00706eefff096f730d",
+        "path": "/home/cwe/git/quinte/testdata/mail-zsdW.tmp",
+        "subject": "Charles the Bald king of the Franks!",
+        "to": "you@example.com"
+      }
+    ]
+  }
+}
